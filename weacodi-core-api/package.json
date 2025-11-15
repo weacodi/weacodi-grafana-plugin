@@ -1,0 +1,24 @@
+{
+  "name": "weacodi-core-api",
+  "version": "1.0.0",
+  "main": "dist/server.js",
+  "license": "AGPL-3.0-only",
+  "author": "Oleksii Zubovskyi & Olena Zubovska",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "ts-node-dev src/server.ts"
+  },
+  "dependencies": {
+    "fastify": "^4.24.3",
+    "@fastify/redis": "^6.2.0",
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1",
+    "ioredis": "^5.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.10",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.2.2"
+  }
+}

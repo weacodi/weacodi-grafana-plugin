@@ -1,0 +1,18 @@
+WeaCoDi Grafana Plugin NOTICE
+=============================
+
+Copyright © 2024‑2025 Oleksii Zubovskyi & Olena Zubovska
+
+The WeaCoDi Grafana plugin (datasource, panel, backend binaries) is licensed
+under the GNU Affero General Public License v3.0. If you modify and deploy this
+plugin—whether privately or as a hosted Grafana service—you must provide source
+code to users as required by the AGPL.
+
+The underlying Weather Comfort Diagram (WeaCoDi™) methodology, visual model and
+terminology remain separately licensed under the Creative Commons
+Attribution‑ShareAlike 4.0 International License (see `../docs/LICENSE`
+and `../docs/weacodi-concept.pdf`). Any derivative diagrams must credit Oleksii
+Zubovskyi and Olena Zubovska and keep the same CC BY-SA terms.
+
+Trademarks: WeaCoDi™, Weacodi™, and stylized variants may not be used for
+product naming or marketing without permission.

@@ -1,0 +1,49 @@
+version: '3.8'
+services:
+  weacodi-api:
+    build:
+      context: .
+      target: development
+    ports:
+      - "8080:8080"
+    environment:
+      - NODE_ENV=development
+      - REDIS_HOST=redis
+    env_file:
+      - .env
+    volumes:
+      - ./src:/app/src
+    depends_on:
+      redis:
+        condition: service_healthy 
+    command: npm run dev
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_LOG_LEVEL=debug
+      - GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS=weacodi-weacodi-app,weacodi-weacodi-ds
+      - GF_SECURITY_ADMIN_PASSWORD=weacodi
+    volumes:
+      - grafana-storage:/var/lib/grafana
+      - ../weacodi-weacodi-app/dist:/var/lib/grafana/plugins/weacodi-weacodi-app
+
+volumes:
+  grafana-storage:
+  redis-data:
+  
+  

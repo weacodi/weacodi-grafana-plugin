@@ -1,0 +1,18 @@
+WeaCoDi Weather Visualization Toolkit
+=====================================
+
+Copyright © 2024‑2025 Oleksii Zubovskyi & Olena Zubovska
+
+The source code contained in this repository (Grafana plugin, Fastify API,
+dashboards, build scripts) is licensed under the GNU Affero General Public
+License v3.0 (see `LICENSE`). Any deployment, modification, or network use must
+retain this license and make source code available to users.
+
+The WeaCoDi™ (Weather Comfort Diagram) visualization method, as described in
+`docs/weacodi-concept.pdf` and related documentation, remains separately licensed under the
+Creative Commons Attribution‑ShareAlike 4.0 International License
+(`LICENSE_WEACODI.md`). Derivative diagrams must credit Oleksii Zubovskyi and
+Olena Zubovska and be released under the same CC BY-SA terms.
+
+WeaCoDi™, Weacodi™, and related marks are claimed trademarks and may not be used
+in product names or marketing without permission.

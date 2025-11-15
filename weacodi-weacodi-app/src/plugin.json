@@ -1,0 +1,90 @@
+{
+  "$schema": "https://raw.githubusercontent.com/grafana/grafana/main/docs/sources/developers/plugins/plugin.schema.json",
+  "type": "app",
+  "name": "WeaCoDi",
+  "id": "weacodi-weacodi-app",
+  "backend": true,
+  "executable": "gpx_wea_co_di",
+  "info": {
+    "keywords": [
+      "app",
+      "weather",
+      "forecast",
+      "weacodi",
+      "comfort"
+    ],
+    "description": "WeaCoDi (Weather Comfort Diagram) renders multi-layer forecasts (comfort, precipitation, wet/ice flags, UV, wind, etc.) inside Grafana.",
+    "author": {
+      "name": "Oleksii Zubovskyi & Olena Zubovska",
+      "email": "weacodi@gmail.com",
+      "url": "https://weacodi.com"
+    },
+    "logos": {
+      "small": "img/logo.svg",
+      "large": "img/logo.svg"
+    },
+    "version": "1.0.0",
+    "updated": "2025-11-08",
+    "links": [
+      {
+        "name": "Documentation",
+        "url": "https://github.com/weacodi/weacodi-grafana"
+      },
+      {
+        "name": "Project Website",
+        "url": "https://weacodi.com"
+      },
+      {
+        "name": "README",
+        "url": "https://github.com/weacodi/weacodi-grafana/blob/main/README.md"
+      },
+      {
+        "name": "Code License (AGPL-3.0)",
+        "url": "https://github.com/weacodi/weacodi-grafana/blob/main/LICENSE"
+      },
+      {
+        "name": "Method License (CC BY-SA 4.0)",
+        "url": "https://github.com/weacodi/weacodi-grafana/blob/main/docs/LICENSE"
+      }
+    ],
+    "license": {
+      "name": "GNU Affero General Public License v3.0",
+      "url": "https://www.gnu.org/licenses/agpl-3.0.en.html",
+      "description": "Plugin code is licensed under AGPL-3.0; the WeaCoDi visualization method remains under CC BY-SA 4.0."
+    }
+  },
+  "routes": [
+    {
+      "path": "weacodi-api",
+      "url": "http://weacodi-api:8080",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "content": "application/json"
+        }
+      ]
+    }
+  ],
+  "includes": [
+    {
+      "type": "datasource",
+      "name": "WeaCoDi",
+      "id": "weacodi-weacodi-ds",
+      "module": "datasource/module",
+      "backend": true,
+      "executable": "gpx_wea_co_di"
+    },
+    {
+      "type": "page",
+      "name": "Page One",
+      "path": "/a/weacodi-weacodi-app/one",
+      "addToNav": true,
+      "defaultNav": true
+    }
+  ],
+  "dependencies": {
+    "grafanaDependency": ">=10.4.0",
+    "plugins": []
+  },
+  "buildMode": "development"
+}
