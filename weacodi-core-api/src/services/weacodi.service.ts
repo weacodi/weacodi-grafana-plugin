@@ -587,117 +587,89 @@ export class WeaCoDiService {
     // 1. Temperature
     if (temperature < 5 || temperature > 35) {
         score -= 4;
-        // console.log(TAG, "Temperature penalty -4: " + temperature);
     } else if ((temperature >= 5 && temperature < 15) || (temperature >= 25 && temperature <= 35)) {
         score -= 2;
-        // console.log(TAG, "Temperature moderate penalty -2: " + temperature);
     }
     if (temperature < -6) {
         score -= 3;
-        // console.log(TAG, "Severe cold penalty -3: " + temperature);
     } else if (temperature < -3) {
         score -= 2;
-        // console.log(TAG, "Moderate cold penalty -2: " + temperature);
     } else if (temperature < 0) {
         score -= 1;
-        // console.log(TAG, "Light cold penalty -1: " + temperature);
     }
     if (temperature > 40) {
         score -= 3;
-        // console.log(TAG, "Extreme heat penalty -3: " + temperature);
     }
 
     // 2. Dew Point
     if (dewPoint <= 10) {
         score += 1;
-        // console.log(TAG, "Very dry bonus +1: " + dewPoint);
     } else if (dewPoint <= 16) {
         const penalty = dewPoint <= 13 ? 0 : (dewPoint <= 16 ? -1 : 0);
         if (penalty !== 0) {
             score += penalty;
-            // console.log(TAG, "Dew point penalty " + penalty + ": " + dewPoint);
         }
     } else if (dewPoint <= 19) {
         score -= 2;
-        // console.log(TAG, "Dew point penalty -2: " + dewPoint);
     } else if (dewPoint <= 22) {
         score -= 3;
-        // console.log(TAG, "Dew point penalty -3: " + dewPoint);
     } else if (dewPoint <= 25) {
         score -= 4;
-        // console.log(TAG, "Dew point penalty -4: " + dewPoint);
     } else {
         score -= 5;
-        // console.log(TAG, "Dew point penalty -5: " + dewPoint);
     }
 
     // 3. Wind
     if (windSpeed > 25) {
         score -= 3;
-        // console.log(TAG, "Strong wind penalty -3: " + windSpeed);
     } else if (windSpeed >= 15) {
         score -= 1;
-        // console.log(TAG, "Moderate wind penalty -1: " + windSpeed);
     } else if (windSpeed >= 5 && temperature > 25 && dewPoint > 16) {
         score += 1;
-        // console.log(TAG, "Cooling wind bonus +1: " + windSpeed);
     }
 
     // 4. Precipitation
     if (precipitation > 10) {
         score -= 5;
-        // console.log(TAG, "Heavy rain penalty -5: " + precipitation);
     } else if (precipitation >= 5) {
         score -= 3;
-        // console.log(TAG, "Moderate rain penalty -3: " + precipitation);
     } else if (precipitation >= 1) {
         score -= 1;
-        // console.log(TAG, "Light rain penalty -1: " + precipitation);
     }
 
     // 5. Solar Radiation
     if (temperature < 10 && solarRadiation > 300) {
         score += 2;
-        // console.log(TAG, "Solar warming bonus +2: " + solarRadiation);
     } else if (temperature < 20 && solarRadiation > 500) {
         score += 1;
-        // console.log(TAG, "Mild solar bonus +1: " + solarRadiation);
     } else if (temperature > 28 && solarRadiation > 400) {
         score -= 2;
-        // console.log(TAG, "Solar heat penalty -2: " + solarRadiation);
     } else if (temperature > 25 && solarRadiation > 300) {
         score -= 1;
-        // console.log(TAG, "Solar discomfort penalty -1: " + solarRadiation);
     }
 
     // Overheat conditions
     if (dewPoint > 18 && solarRadiation > 400 && windSpeed < 10 && temperature > 25) {
         score -= 1;
-        // console.log(TAG, "Overheat condition penalty -1");
     }
     if (dewPoint > 21 && solarRadiation > 500 && windSpeed < 5 && temperature > 28) {
         score -= 2;
-        // console.log(TAG, "Severe overheat condition penalty -2");
     }
 
     // 6. Sensitivity
     if (sensitivity.toLowerCase() === "heatsensitive") {
         if (dewPoint > 16) {
             score -= 1;
-            // console.log(TAG, "Heat-sensitive dew point penalty -1");
         }
         if (temperature > 28) {
             score -= 1;
-            // console.log(TAG, "Heat-sensitive temperature penalty -1");
         }
     } else if (sensitivity.toLowerCase() === "coldsensitive") {
         if (temperature < 10) {
             score -= 1;
-            // console.log(TAG, "Cold-sensitive temperature penalty -1");
         }
         if (windSpeed > 15) {
             score -= 1;
-            // console.log(TAG, "Cold-sensitive wind penalty -1");
         }
     }
 
@@ -705,16 +677,13 @@ export class WeaCoDiService {
     if (dewPoint > 22 && temperature > 30) {
         const penalty = intensity === 2 ? -4 : (intensity === 1 ? -3 : -2);
         score += penalty;
-        // console.log(TAG, "High dew & temp + intensity penalty " + penalty);
     } else if (dewPoint > 19 && temperature > 28) {
         const penalty = intensity === 2 ? -3 : (intensity === 1 ? -2 : -1);
         score += penalty;
-        // console.log(TAG, "Medium dew & temp + intensity penalty " + penalty);
     }
 
     // Final clamping
     score = Math.max(1, Math.min(score, 10));
-    // console.log(TAG, "Final comfort score: " + score * 10);
     return score * 10;
   }
 
