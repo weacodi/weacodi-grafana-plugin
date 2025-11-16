@@ -86,9 +86,9 @@ We keep software and methodology under separate communities-friendly licenses.
 | Plugin + API code (`weacodi-weacodi-app/`, `weacodi-core-api/`, dashboards) | [GNU AGPL v3](LICENSE) | Guarantees share-alike even for hosted Grafana/SaaS deployments. |
 | WeaCoDi™ concept, diagrams, documentation (`docs/weacodi-concept.pdf`) | [CC BY-SA 4.0](docs/LICENSE) | Ensures attribution to **Oleksii Zubovskyi & Olena Zubovska** and share-alike for visual adaptations. |
 
-Trademark notice: “WeaCoDi”, “Weacodi”, and stylized variants are trademarks
-held by Oleksii Zubovskyi & Olena Zubovska. Use the name descriptively (“powered
-by Weacodi”), but do not rebrand your product without permission.
+Trademark notice: “WeaCoDi”, “Weacodi”, “weacodi”, and stylized variants are
+trademarks held by Oleksii Zubovskyi & Olena Zubovska. Use the name descriptively
+(“powered by Weacodi”), but do not rebrand your product without permission.
 
 ## Authors & contact
 
