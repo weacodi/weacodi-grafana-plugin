@@ -87,8 +87,8 @@ We keep software and methodology under separate communities-friendly licenses.
 | WeaCoDi™ concept, diagrams, documentation (`docs/weacodi-concept.pdf`) | [CC BY-SA 4.0](docs/LICENSE) | Ensures attribution to **Oleksii Zubovskyi & Olena Zubovska** and share-alike for visual adaptations. |
 
 Trademark notice: “WeaCoDi”, “Weacodi”, and stylized variants are trademarks
-held by Oleksii Zubovskyi & Olena Zubovska. Use the name descriptively (“Powered
-by WeaCoDi”), but do not rebrand your product without permission.
+held by Oleksii Zubovskyi & Olena Zubovska. Use the name descriptively (“powered
+by Weacodi”), but do not rebrand your product without permission.
 
 ## Authors & contact
 
