@@ -1,4 +1,4 @@
-# WeaCoDi Grafana Plugin
+# Weacodi Grafana Plugin
 
 This repository ships the official Grafana implementation of the **Weather
 Comfort Diagram (WeaCoDi™)** — a datasource + panel combo with a Fastify API
