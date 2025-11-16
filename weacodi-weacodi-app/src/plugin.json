@@ -27,24 +27,38 @@
     "updated": "2025-11-08",
     "links": [
       {
-        "name": "Documentation",
-        "url": "https://github.com/weacodi/weacodi-grafana"
-      },
-      {
         "name": "Project Website",
         "url": "https://weacodi.com"
       },
       {
+        "name": "Source Code",
+        "url": "https://github.com/weacodi/weacodi-grafana-plugin/tree/v1.0.0/weacodi-weacodi-app"
+      },
+      {
+        "name": "Installation Guide",
+        "url": "https://github.com/weacodi/weacodi-grafana-plugin/blob/v1.0.0/INSTALL.md"
+      },
+      {
         "name": "README",
-        "url": "https://github.com/weacodi/weacodi-grafana/blob/main/README.md"
+        "url": "https://github.com/weacodi/weacodi-grafana-plugin/blob/v1.0.0/README.md"
       },
       {
         "name": "Code License (AGPL-3.0)",
-        "url": "https://github.com/weacodi/weacodi-grafana/blob/main/LICENSE"
+        "url": "https://github.com/weacodi/weacodi-grafana-plugin/blob/v1.0.0/LICENSE"
       },
       {
         "name": "Method License (CC BY-SA 4.0)",
-        "url": "https://github.com/weacodi/weacodi-grafana/blob/main/docs/LICENSE"
+        "url": "https://github.com/weacodi/weacodi-grafana-plugin/blob/v1.0.0/docs/LICENSE"
+      }
+    ],
+    "screenshots": [
+      {
+        "name": "Stockholm forecast",
+        "path": "img/grafana-stockholm.png"
+      },
+      {
+        "name": "Montreal forecast",
+        "path": "img/grafana-montreal.png"
       }
     ],
     "license": {

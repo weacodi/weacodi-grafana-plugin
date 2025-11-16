@@ -1,5 +1,11 @@
 {
   "type": "datasource",
   "name": "WeaCoDi",
-  "id": "weacodi-weacodi-ds"
+  "id": "weacodi-weacodi-ds",
+  "info": {
+    "logos": {
+      "small": "img/logo.svg",
+      "large": "img/logo.svg"
+    }
+  }
 }

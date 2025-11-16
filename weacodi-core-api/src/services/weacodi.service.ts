@@ -91,22 +91,20 @@ export class WeaCoDiService {
     try {
       const cachedData = await this.redis.get(cacheKey);
       if (cachedData) {
-        console.log(`Cache HIT for key: ${cacheKey}`);
         const parsed = JSON.parse(cachedData) as unknown;
         const sanitized = this.sanitizeResponse(parsed);
         if (this.hasLegacyFields(parsed)) {
           try {
             await this.redis.set(cacheKey, JSON.stringify(sanitized), 'EX', config.cacheTTL);
           } catch (rewriteErr) {
-            console.error('Redis legacy rewrite error:', rewriteErr);
+            // noop
           }
         }
         return this.applyUnits(sanitized, normalizedUnits);
       }
     } catch (err) {
-      console.error('Redis GET error:', err);
+      // noop
     }
-    console.log(`Cache MISS for key: ${cacheKey}`);
 
     const openMeteoData = await this.fetchFromOpenMeteo(lat, lon, MAX_CACHE_DAYS);
 
@@ -117,12 +115,11 @@ export class WeaCoDiService {
     const fullResult = this.calculateWeaCoDi(openMeteoData, sensitivity, intensity, windowDays);
     const sanitizedResult = this.sanitizeResponse(fullResult);
     const convertedResult = this.applyUnits(sanitizedResult, normalizedUnits);
-    console.log('WeaCoDi API response keys:', Object.keys(convertedResult));
 
     try {
       await this.redis.set(cacheKey, JSON.stringify(sanitizedResult), 'EX', config.cacheTTL);
     } catch (err) {
-      console.error('Redis SET error:', err);
+      // noop
     }
 
     return convertedResult;
@@ -178,19 +175,18 @@ export class WeaCoDiService {
         }
       });
       
-      console.log(`Fetching from Open-Meteo: ${response.request.path}`);
       return response.data;
 
     } catch (error: unknown) {
       if (axios.isAxiosError(error)) {
-        console.error("Open-Meteo API Call Failed:", error.response?.data || error.message);
+        throw new Error(`Open-Meteo API Call Failed: ${error.response?.data || error.message}`);
       } else if (error instanceof Error) {
-        console.error("Open-Meteo API Call Failed:", error.message);
+        throw new Error(`Open-Meteo API Call Failed: ${error.message}`);
       } else {
-        console.error("Open-Meteo API Call Failed with unknown error");
+        throw new Error("Open-Meteo API Call Failed with unknown error");
       }
-      return null;
     }
+    return null;
   }
 
   /**
@@ -202,9 +198,6 @@ export class WeaCoDiService {
     intensity: 0 | 1 | 2,
     windowDays: number
   ): WeaCoDiResponse {
-    
-    console.log('Calculating WeaCoDi from:', openMeteoData.hourly.time.length, 'data points');
-
     const hourly = openMeteoData.hourly;
     const daily = openMeteoData.daily;
     const timezoneOffsetSeconds = openMeteoData.utc_offset_seconds ?? 0;
@@ -556,8 +549,6 @@ export class WeaCoDiService {
   private calculateDewPoint(temperature: number, humidity: number): number {
     //
     if (humidity < 1 || humidity > 100) {
-        // Original implementation threw; API variant only logs
-        console.warn(`Incorrect value for humidity: "${humidity}". Clamping to 1-100.`);
         humidity = Math.max(1, Math.min(100, humidity));
     }
 

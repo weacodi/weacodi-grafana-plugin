@@ -125,7 +125,7 @@ const updatePluginAndReload = async (pluginId: string, data: Partial<PluginMeta<
     // This is not ideal, however unfortunately currently there is no supported way for updating the plugin state.
     window.location.reload();
   } catch (e) {
-    console.error('Error while updating the plugin', e);
+    throw e;
   }
 };
 

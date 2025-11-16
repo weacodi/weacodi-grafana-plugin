@@ -86,8 +86,6 @@ export class DataSource extends DataSourceApi<MyQuery, MyDataSourceOptions> {
 
       const url = `/api/plugins/${pluginId}/resources/${routeAlias}${apiEndpoint}?${params.toString()}`;
 
-      console.log('DataSource Fetching URL:', url);
-
       try {
         const response = await getBackendSrv()
           .fetch({ url, method: 'GET', headers: this.buildRequestHeaders() })
@@ -97,7 +95,6 @@ export class DataSource extends DataSourceApi<MyQuery, MyDataSourceOptions> {
         }
 
         const apiData = response.data as WeaCoDiResponse;
-        console.log('WeaCoDi API payload keys:', Object.keys(apiData || {}));
         const temperature = Array.isArray(apiData.temperature) ? apiData.temperature : [];
         const wind = Array.isArray(apiData.wind) ? apiData.wind : [];
         const humidity = Array.isArray(apiData.humidity) ? apiData.humidity : [];
@@ -196,7 +193,6 @@ export class DataSource extends DataSourceApi<MyQuery, MyDataSourceOptions> {
 
         data.push(frame);
       } catch (err: any) {
-        console.error('DataSource Query Error:', err);
         const message = err.data?.message || err.statusText || err.message || 'Failed to fetch WeaCoDi data';
         return { data: [], error: { message } };
       }
@@ -224,7 +220,6 @@ export class DataSource extends DataSourceApi<MyQuery, MyDataSourceOptions> {
         message: 'Success: Connected to WeaCoDi API',
       };
     } catch (err: any) {
-      console.error('DataSource Test Error:', err);
       return {
         status: 'error',
         message: `Failed to connect to WeaCoDi API: ${err.statusText || err.data?.message || err.message}`,

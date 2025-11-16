@@ -21,8 +21,6 @@ export function PageOne() {
 
     const url = `/api/plugins/${pluginId}/routes/${routeAlias}${apiEndpoint}?${params.toString()}`;
 
-    console.log('Fetching URL:', url);
-
     getBackendSrv()
       .fetch({ url, method: 'GET' })
       .subscribe({
@@ -31,7 +29,6 @@ export function PageOne() {
           setLoading(false);
         },
         error: (err) => {
-          console.error('Fetch error:', err);
           setError(err.data?.message || err.statusText);
           setLoading(false);
         },
