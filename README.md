@@ -4,9 +4,9 @@ This repository ships the official Grafana implementation of the **Weather
 Comfort Diagram (WeaCoDi™)** — a datasource + panel combo with a Fastify API
 that draws the multi-layer comfort chart directly inside Grafana dashboards.
 Weacodi is an alternative way to visualize the weather forecast, letting you
-assess atmospheric conditions in one second without parsing numeric tables. The
-layered diagram shows daylight, sun, clouds, rain, snow, wind, comfort score,
-wet/ice flags, and pressure in a single glance.
+assess atmospheric conditions in one second without parsing numeric tables with
+icons. The layered diagram shows daylight, sun, clouds, rain, snow, wind, comfort
+score,wet/ice flags, and pressure in a single glance.
 
 ![Stockholm forecast](weacodi-grafana-plugin-stockholm.pdf)
 
@@ -88,9 +88,8 @@ We keep software and methodology under separate communities-friendly licenses.
 | WeaCoDi™ concept, diagrams, documentation (`docs/weacodi-concept.pdf`) | [CC BY-SA 4.0](docs/LICENSE) | Ensures attribution to **Oleksii Zubovskyi & Olena Zubovska** and share-alike for visual adaptations. |
 
 Trademark notice: “WeaCoDi”, “Weacodi”, “weacodi”, and stylized variants are
-claimed as trademarks by Oleksii Zubovskyi & Olena Zubovska. Use the name
-descriptively (“powered by Weacodi”), but do not rebrand your product without
-permission.
+claimed as trademarks by Oleksii Zubovskyi & Olena Zubovska. Use Weacodi freely
+in descriptive, referential, and conversational contexts — just don’t make it your brand.
 
 ## Authors & contact
 
