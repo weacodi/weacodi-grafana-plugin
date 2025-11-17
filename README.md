@@ -78,7 +78,7 @@ Response arrays cover `daylight`, `sun`, `clouds`, `rain`, `snow`, `temperature`
 `humidity`, `uv`, `feelsLike`, `wet`, `ice`, `pressure`, `comfort`, `wind`.
 Field descriptions live in [USER_GUIDE.md](USER_GUIDE.md).
 
-## Licensing
+## License
 
 We keep software and methodology under separate communities-friendly licenses.
 
