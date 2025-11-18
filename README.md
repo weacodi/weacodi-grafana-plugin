@@ -8,7 +8,7 @@ assess atmospheric conditions in one second without parsing numeric tables with
 icons. The layered diagram shows daylight, sun, clouds, rain, snow, wind, comfort
 score,wet/ice flags, and pressure in a single glance.
 
-![Stockholm forecast](weacodi-grafana-plugin-stockholm.pdf)
+![Stockholm forecast](weacodi-grafana-plugin-stockholm.png)
 
 ![Montreal forecast](weacodi-grafana-plugin-montreal.png)
 
