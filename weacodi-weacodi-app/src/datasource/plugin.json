@@ -1,0 +1,12 @@
+{
+  "$schema": "https://raw.githubusercontent.com/grafana/grafana/main/docs/sources/developers/plugins/plugin.schema.json",
+  "type": "datasource",
+  "name": "Weacodi",
+  "id": "weacodi-weacodi-datasource",
+  "info": {
+    "logos": {
+      "small": "img/logo.png",
+      "large": "img/logo.png"
+    }
+  }
+}

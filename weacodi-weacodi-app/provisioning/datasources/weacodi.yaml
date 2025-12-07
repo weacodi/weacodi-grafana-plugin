@@ -1,0 +1,10 @@
+apiVersion: 1
+
+datasources:
+  - name: weacodi
+    type: weacodi-weacodi-datasource
+    uid: weacodi-default
+    access: proxy
+    isDefault: true
+    jsonData: {}
+    editable: true

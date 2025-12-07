@@ -1,0 +1,12 @@
+{
+  "name": "weacodi-grafana-plugin",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npm run build --prefix weacodi-weacodi-app",
+    "package": "./scripts/package.sh"
+  },
+  "workspaces": [
+    "weacodi-weacodi-app"
+  ]
+}

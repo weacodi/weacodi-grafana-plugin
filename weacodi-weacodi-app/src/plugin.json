@@ -1,0 +1,95 @@
+{
+  "$schema": "https://raw.githubusercontent.com/grafana/grafana/main/docs/sources/developers/plugins/plugin.schema.json",
+  "type": "app",
+  "name": "Weacodi",
+  "id": "weacodi-weacodi-app",
+  "includes": [
+    {
+      "type": "datasource",
+      "name": "Weacodi Datasource",
+      "path": "datasource/plugin.json",
+      "id": "weacodi-weacodi-datasource",
+      "module": "datasource/module",
+      "role": "Viewer",
+      "addToNav": false,
+      "defaultNav": false
+    },
+    {
+      "type": "page",
+      "name": "Configuration",
+      "path": "config",
+      "role": "Admin",
+      "addToNav": true,
+      "defaultNav": true
+    }
+  ],
+  "info": {
+    "keywords": [
+      "app",
+      "weather",
+      "forecast",
+      "weacodi",
+      "comfort"
+    ],
+    "description": "Weacodi (Weather Comfort Diagram) renders multi-layer forecasts (comfort, precipitation, wet/ice flags, UV, wind, etc.) inside Grafana.",
+    "author": {
+      "name": "Weacodi.com",
+      "email": "weacodi@gmail.com",
+      "url": "https://weacodi.com"
+    },
+    "logos": {
+      "small": "img/logo.png",
+      "large": "img/logo.png"
+    },
+    "version": "1.0.0",
+    "updated": "2024-11-26",
+    "links": [
+      {
+        "name": "Project Website",
+        "url": "https://weacodi.com"
+      },
+      {
+        "name": "Source Code",
+        "url": "https://github.com/weacodi/weacodi-grafana-plugin/tree/main/weacodi-weacodi-app"
+      },
+      {
+        "name": "Installation Guide",
+        "url": "https://github.com/weacodi/weacodi-grafana-plugin/blob/main/INSTALL.md"
+      },
+      {
+        "name": "README",
+        "url": "https://github.com/weacodi/weacodi-grafana-plugin/blob/main/README.md"
+      },
+      {
+        "name": "Code License (AGPL-3.0)",
+        "url": "https://github.com/weacodi/weacodi-grafana-plugin/blob/main/LICENSE"
+      },
+      {
+        "name": "Method License (CC BY-SA 4.0)",
+        "url": "https://github.com/weacodi/weacodi-grafana-plugin/blob/main/docs/LICENSE"
+      }
+    ],
+    "screenshots": [
+      {
+        "name": "Stockholm forecast",
+        "path": "img/grafana-stockholm.png"
+      },
+      {
+        "name": "Montreal forecast",
+        "path": "img/grafana-montreal.png"
+      }
+    ]
+  },
+  "dependencies": {
+    "grafanaDependency": ">=10.4.0",
+    "plugins": [
+      {
+        "type": "datasource",
+        "id": "weacodi-weacodi-datasource",
+        "name": "Weacodi",
+        "path": "datasource/plugin.json"
+      }
+    ]
+  },
+  "buildMode": "production"
+}

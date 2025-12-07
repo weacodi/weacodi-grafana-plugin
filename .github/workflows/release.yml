@@ -1,0 +1,65 @@
+name: Release Plugin
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./weacodi-weacodi-app
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Verify lockfile presence
+        working-directory: ./weacodi-weacodi-app
+        run: |
+          if [ ! -f package-lock.json ]; then
+            echo "package-lock.json not found; generating from package.json"
+            npm install --package-lock-only
+          fi
+          ls -l package-lock.json
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'
+          cache: 'npm'
+          cache-dependency-path: weacodi-weacodi-app/package-lock.json
+
+      - name: Use npm@11.6.1
+        working-directory: ./weacodi-weacodi-app
+        run: npm install -g npm@11.6.1
+
+      - name: Install dependencies
+        run: npm ci || npm install
+
+      - name: Build plugin
+        run: npm run build
+
+      - name: Get plugin metadata
+        id: metadata
+        run: |
+          sudo apt-get install jq
+          VERSION=$(cat src/plugin.json | jq -r .info.version)
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          PLUGIN_ID=$(cat src/plugin.json | jq -r .id)
+          echo "plugin_id=$PLUGIN_ID" >> $GITHUB_OUTPUT
+
+      - name: Package plugin
+        run: |
+          mv dist ${{ steps.metadata.outputs.plugin_id }}
+          zip -r ${{ steps.metadata.outputs.plugin_id }}-${{ steps.metadata.outputs.version }}.zip ${{ steps.metadata.outputs.plugin_id }}
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: weacodi-weacodi-app/*.zip
+          generate_release_notes: true
