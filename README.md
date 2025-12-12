@@ -49,8 +49,8 @@ docs/                         Weacodi concept PDF
 Grafana becomes available at <http://localhost:3000> (default login `admin` / `admin` for a clean install). The provided Docker Compose stack
 auto-provisions a datasource named `weacodi`, so the dashboards included with this repo start working immediately. If you deploy
 the plugin in another Grafana instance, create a datasource of type “Weacodi” and name it `weacodi` (no settings required — it connects to the
-public Open-Meteo API) and import the reference dashboards (`weacodi_dashboard.json` and
-`weacodi_cities_dashboard.json`) through *Dashboards → Import*.
+public Open-Meteo API). Enabling the app auto-imports the bundled dashboard **Weacodi – Overview** from
+`dashboards/weacodi_overview.json` inside the plugin bundle. You can also import it manually via *Dashboards → Import* if needed.
 
 ## Packaging for Grafana plugin catalog
 

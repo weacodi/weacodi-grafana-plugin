@@ -19,8 +19,15 @@
       "name": "Configuration",
       "path": "config",
       "role": "Admin",
-      "addToNav": true,
-      "defaultNav": true
+      "addToNav": false,
+      "defaultNav": false
+    },
+    {
+      "type": "dashboard",
+      "name": "Weacodi – Overview",
+      "path": "dashboards/weacodi_overview.json",
+      "role": "Admin",
+      "addToNav": false
     }
   ],
   "info": {
@@ -41,7 +48,7 @@
       "small": "img/logo.png",
       "large": "img/logo.png"
     },
-    "version": "1.0.0",
+    "version": "1.0.1",
     "updated": "2024-11-26",
     "links": [
       {
@@ -81,15 +88,7 @@
     ]
   },
   "dependencies": {
-    "grafanaDependency": ">=10.4.0",
-    "plugins": [
-      {
-        "type": "datasource",
-        "id": "weacodi-weacodi-datasource",
-        "name": "Weacodi",
-        "path": "datasource/plugin.json"
-      }
-    ]
+    "grafanaDependency": ">=10.4.0"
   },
   "buildMode": "production"
 }

@@ -58,7 +58,9 @@ If you want to install the plugin into an existing Grafana instance, follow the 
    - Name: `weacodi`.
    - No additional configuration is required; the datasource connects directly to Open-Meteo.
 
-The reference dashboards (`weacodi_dashboard.json` and `weacodi_cities_dashboard.json`) can then be imported manually via Grafana's *Dashboards → Import* dialog. As long as the datasource is named `weacodi`, the panels will bind to it automatically.
+When the Weacodi app is enabled, the bundled dashboard **Weacodi – Overview** (shipped as
+`dashboards/weacodi_overview.json` inside the plugin folder) is imported automatically. You can also import it manually via
+*Dashboards → Import*; as long as the datasource is named `weacodi`, the panels will bind to it automatically.
 
 ## Updating the plugin
 

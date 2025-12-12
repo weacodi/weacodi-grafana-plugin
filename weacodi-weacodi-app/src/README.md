@@ -4,7 +4,9 @@ Weacodi (Weather Comfort Diagram) renders a layered weather forecast directly in
 
 ## Getting Started
 
-In Grafana, create a datasource of type “Weacodi” named `weacodi` (no settings needed), then import `weacodi_dashboard.json` or `weacodi_cities_dashboard.json`.
+In Grafana, create a datasource of type “Weacodi” named `weacodi` (no settings needed). When you enable the app, the
+bundled dashboard **Weacodi – Overview** (from `dashboards/weacodi_overview.json`) is imported automatically; you can also
+import it manually via *Dashboards → Import*.
 
 ## Features
 

@@ -18,7 +18,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 8,
+  "id": null,
   "links": [],
   "panels": [
     {
@@ -345,19 +345,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -400,7 +398,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -421,9 +419,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -486,9 +484,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -541,9 +539,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -657,7 +655,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -726,9 +728,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -801,8 +803,8 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
+        "h": 13,
+        "w": 24,
         "x": 0,
         "y": 0
       },
@@ -812,7 +814,834 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
+        },
+        "timezone": [
+          "Europe/Berlin"
+        ],
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        },
+        "xAxis": {
+          "axisLabel": {
+            "color": "#FFFFFF",
+            "fontSize": 12,
+            "formatter": "YYYY-MM-DD HH:mm"
+          },
+          "mode": "time",
+          "show": true,
+          "tickLabelMode": "continuous"
+        }
+      },
+      "pluginVersion": "12.2.1",
+      "targets": [
+        {
+          "lat": "48.07",
+          "lon": "11.41",
+          "refId": "A",
+          "sensitivity": "coldSensitive",
+          "units": "metric"
+        }
+      ],
+      "title": "Neuried",
+      "type": "timeseries"
+    },
+    {
+      "datasource": "weacodi",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 42,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "stepBefore",
+            "lineWidth": 2,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "showValues": false,
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "max": 100,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "daylight"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Daylight"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "super-light-blue",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.fillOpacity",
+                "value": 100
+              },
+              {
+                "id": "custom.lineWidth",
+                "value": 0
+              },
+              {
+                "id": "custom.gradientMode",
+                "value": "opacity"
+              },
+              {
+                "id": "custom.axisPlacement",
+                "value": "hidden"
+              },
+              {
+                "id": "min",
+                "value": -1
+              },
+              {
+                "id": "max",
+                "value": 99
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "sun"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Sun"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "light-orange",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.fillOpacity",
+                "value": 72
+              },
+              {
+                "id": "custom.gradientMode",
+                "value": "scheme"
+              },
+              {
+                "id": "custom.lineWidth",
+                "value": 0
+              },
+              {
+                "id": "custom.axisPlacement",
+                "value": "hidden"
+              },
+              {
+                "id": "min",
+                "value": 1
+              },
+              {
+                "id": "custom.hideFrom",
+                "value": {
+                  "legend": false,
+                  "tooltip": true,
+                  "viz": false
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "clouds"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Clouds"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#e9f2ff",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.lineWidth",
+                "value": 1
+              },
+              {
+                "id": "custom.fillOpacity",
+                "value": 45
+              },
+              {
+                "id": "custom.gradientMode",
+                "value": "scheme"
+              },
+              {
+                "id": "custom.axisPlacement",
+                "value": "hidden"
+              },
+              {
+                "id": "unit",
+                "value": "percent"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "rain"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Rain"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#57e4f2",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.fillOpacity",
+                "value": 28
+              },
+              {
+                "id": "custom.gradientMode",
+                "value": "none"
+              },
+              {
+                "id": "custom.axisPlacement",
+                "value": "hidden"
+              },
+              {
+                "id": "min",
+                "value": 0.1
+              },
+              {
+                "id": "max",
+                "value": 10
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "snow"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Snow"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#fdfdfd",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.fillOpacity",
+                "value": 50
+              },
+              {
+                "id": "custom.gradientMode",
+                "value": "none"
+              },
+              {
+                "id": "custom.axisPlacement",
+                "value": "hidden"
+              },
+              {
+                "id": "min",
+                "value": 0.1
+              },
+              {
+                "id": "max",
+                "value": 10
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "comfort"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Comfort"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "yellow",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.lineWidth",
+                "value": 3
+              },
+              {
+                "id": "custom.fillOpacity",
+                "value": 0
+              },
+              {
+                "id": "custom.axisPlacement",
+                "value": "hidden"
+              },
+              {
+                "id": "unit",
+                "value": "percent"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "wind"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Wind"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "blue",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.lineWidth",
+                "value": 2
+              },
+              {
+                "id": "custom.fillOpacity",
+                "value": 0
+              },
+              {
+                "id": "custom.axisPlacement",
+                "value": "left"
+              },
+              {
+                "id": "custom.lineInterpolation",
+                "value": "smooth"
+              },
+              {
+                "id": "min"
+              },
+              {
+                "id": "max"
+              },
+              {
+                "id": "decimals",
+                "value": 0
+              },
+              {
+                "id": "custom.hideFrom",
+                "value": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "temperature"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Temperature"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "light-red",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.lineWidth",
+                "value": 2
+              },
+              {
+                "id": "custom.fillOpacity",
+                "value": 0
+              },
+              {
+                "id": "custom.axisPlacement",
+                "value": "left"
+              },
+              {
+                "id": "custom.lineInterpolation",
+                "value": "smooth"
+              },
+              {
+                "id": "min",
+                "value": -20
+              },
+              {
+                "id": "max",
+                "value": 40
+              },
+              {
+                "id": "decimals",
+                "value": 0
+              },
+              {
+                "id": "custom.hideFrom",
+                "value": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "humidity"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Humidity"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "green",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.lineWidth",
+                "value": 1
+              },
+              {
+                "id": "custom.fillOpacity",
+                "value": 0
+              },
+              {
+                "id": "custom.axisPlacement",
+                "value": "hidden"
+              },
+              {
+                "id": "custom.drawStyle",
+                "value": "line"
+              },
+              {
+                "id": "custom.lineInterpolation",
+                "value": "linear"
+              },
+              {
+                "id": "min",
+                "value": 0
+              },
+              {
+                "id": "max",
+                "value": 100
+              },
+              {
+                "id": "custom.lineStyle",
+                "value": {
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
+                }
+              },
+              {
+                "id": "custom.hideFrom",
+                "value": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "uv"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "UV Index"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "purple",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.lineWidth",
+                "value": 2
+              },
+              {
+                "id": "custom.fillOpacity",
+                "value": 0
+              },
+              {
+                "id": "custom.axisPlacement",
+                "value": "hidden"
+              },
+              {
+                "id": "min",
+                "value": 1
+              },
+              {
+                "id": "max",
+                "value": 10
+              },
+              {
+                "id": "custom.drawStyle",
+                "value": "line"
+              },
+              {
+                "id": "custom.lineInterpolation",
+                "value": "stepBefore"
+              },
+              {
+                "id": "custom.hideFrom",
+                "value": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "feels_like"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Feels Like"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "semi-dark-red",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.lineWidth",
+                "value": 2
+              },
+              {
+                "id": "custom.fillOpacity",
+                "value": 0
+              },
+              {
+                "id": "custom.axisPlacement",
+                "value": "hidden"
+              },
+              {
+                "id": "custom.lineInterpolation",
+                "value": "smooth"
+              },
+              {
+                "id": "min",
+                "value": -20
+              },
+              {
+                "id": "max",
+                "value": 40
+              },
+              {
+                "id": "custom.lineStyle",
+                "value": {
+                  "fill": "solid"
+                }
+              },
+              {
+                "id": "decimals",
+                "value": 0
+              },
+              {
+                "id": "custom.hideFrom",
+                "value": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "wet"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Wet"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#57e4f2",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.drawStyle",
+                "value": "line"
+              },
+              {
+                "id": "custom.fillOpacity",
+                "value": 60
+              },
+              {
+                "id": "custom.axisPlacement",
+                "value": "hidden"
+              },
+              {
+                "id": "custom.lineInterpolation",
+                "value": "linear"
+              },
+              {
+                "id": "min",
+                "value": 1
+              },
+              {
+                "id": "max",
+                "value": 10
+              },
+              {
+                "id": "custom.lineWidth",
+                "value": 5
+              },
+              {
+                "id": "custom.lineStyle",
+                "value": {
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
+                }
+              },
+              {
+                "id": "custom.hideFrom",
+                "value": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "pressure"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Pressure"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#ffffff",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.lineWidth",
+                "value": 1
+              },
+              {
+                "id": "custom.fillOpacity",
+                "value": 0
+              },
+              {
+                "id": "custom.axisPlacement",
+                "value": "hidden"
+              },
+              {
+                "id": "custom.lineInterpolation",
+                "value": "smooth"
+              },
+              {
+                "id": "min"
+              },
+              {
+                "id": "max"
+              },
+              {
+                "id": "custom.drawStyle",
+                "value": "line"
+              },
+              {
+                "id": "custom.lineStyle",
+                "value": {
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
+                }
+              },
+              {
+                "id": "custom.hideFrom",
+                "value": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "ice"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Ice"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#ffffff",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.drawStyle",
+                "value": "line"
+              },
+              {
+                "id": "custom.fillOpacity",
+                "value": 60
+              },
+              {
+                "id": "custom.axisPlacement",
+                "value": "hidden"
+              },
+              {
+                "id": "custom.lineInterpolation",
+                "value": "linear"
+              },
+              {
+                "id": "min",
+                "value": 1
+              },
+              {
+                "id": "max",
+                "value": 10
+              },
+              {
+                "id": "custom.lineWidth",
+                "value": 5
+              },
+              {
+                "id": "custom.lineStyle",
+                "value": {
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
+                }
+              },
+              {
+                "id": "custom.hideFrom",
+                "value": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 13,
+        "w": 24,
+        "x": 0,
+        "y": 13
+      },
+      "id": 39,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "right",
+          "showLegend": true
         },
         "timezone": [
           "Europe/Berlin"
@@ -1170,19 +1999,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -1225,7 +2052,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -1246,9 +2073,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -1311,9 +2138,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -1366,9 +2193,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -1482,7 +2309,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -1551,9 +2382,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -1626,10 +2457,10 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
-        "x": 12,
-        "y": 0
+        "h": 13,
+        "w": 24,
+        "x": 0,
+        "y": 26
       },
       "id": 2,
       "options": {
@@ -1637,7 +2468,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
         },
         "timezone": [
           "Europe/Berlin"
@@ -1995,19 +2826,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -2050,7 +2879,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -2071,9 +2900,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -2136,9 +2965,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -2191,9 +3020,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -2307,7 +3136,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -2376,9 +3209,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -2451,10 +3284,10 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
+        "h": 13,
+        "w": 24,
         "x": 0,
-        "y": 11
+        "y": 39
       },
       "id": 3,
       "options": {
@@ -2462,7 +3295,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
         },
         "timezone": [
           "Europe/Berlin"
@@ -2820,19 +3653,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -2875,7 +3706,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -2896,9 +3727,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -2961,9 +3792,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -3016,9 +3847,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -3132,7 +3963,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -3201,9 +4036,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -3276,10 +4111,10 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
-        "x": 12,
-        "y": 11
+        "h": 13,
+        "w": 24,
+        "x": 0,
+        "y": 52
       },
       "id": 4,
       "options": {
@@ -3287,7 +4122,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
         },
         "timezone": [
           "Europe/London"
@@ -3645,19 +4480,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -3700,7 +4533,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -3721,9 +4554,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -3786,9 +4619,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -3841,9 +4674,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -3957,7 +4790,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -4026,9 +4863,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -4101,10 +4938,10 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
+        "h": 13,
+        "w": 24,
         "x": 0,
-        "y": 22
+        "y": 65
       },
       "id": 5,
       "options": {
@@ -4112,7 +4949,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
         },
         "timezone": [
           "Europe/Paris"
@@ -4470,19 +5307,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -4525,7 +5360,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -4546,9 +5381,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -4611,9 +5446,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -4666,9 +5501,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -4782,7 +5617,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -4851,9 +5690,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -4926,10 +5765,10 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
-        "x": 12,
-        "y": 22
+        "h": 13,
+        "w": 24,
+        "x": 0,
+        "y": 78
       },
       "id": 6,
       "options": {
@@ -4937,7 +5776,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
         },
         "timezone": [
           "Europe/Stockholm"
@@ -5295,19 +6134,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -5350,7 +6187,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -5371,9 +6208,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -5436,9 +6273,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -5491,9 +6328,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -5607,7 +6444,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -5676,9 +6517,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -5751,10 +6592,10 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
+        "h": 13,
+        "w": 24,
         "x": 0,
-        "y": 33
+        "y": 91
       },
       "id": 7,
       "options": {
@@ -5762,7 +6603,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
         },
         "timezone": [
           "Europe/Stockholm"
@@ -6120,19 +6961,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -6175,7 +7014,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -6196,9 +7035,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -6261,9 +7100,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -6316,9 +7155,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -6432,7 +7271,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -6501,9 +7344,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -6576,10 +7419,10 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
-        "x": 12,
-        "y": 33
+        "h": 13,
+        "w": 24,
+        "x": 0,
+        "y": 104
       },
       "id": 8,
       "options": {
@@ -6587,7 +7430,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
         },
         "timezone": [
           "Africa/Cairo"
@@ -6945,19 +7788,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -7000,7 +7841,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -7021,9 +7862,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -7086,9 +7927,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -7141,9 +7982,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -7257,7 +8098,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -7326,9 +8171,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -7401,10 +8246,10 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
+        "h": 13,
+        "w": 24,
         "x": 0,
-        "y": 44
+        "y": 117
       },
       "id": 9,
       "options": {
@@ -7412,7 +8257,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
         },
         "timezone": [
           "Asia/Tokyo"
@@ -7770,19 +8615,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -7825,7 +8668,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -7846,9 +8689,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -7911,9 +8754,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -7966,9 +8809,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -8082,7 +8925,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -8151,9 +8998,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -8226,10 +9073,10 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
-        "x": 12,
-        "y": 44
+        "h": 13,
+        "w": 24,
+        "x": 0,
+        "y": 130
       },
       "id": 10,
       "options": {
@@ -8237,7 +9084,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
         },
         "timezone": [
           "America/New_York"
@@ -8595,19 +9442,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -8650,7 +9495,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -8671,9 +9516,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -8736,9 +9581,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -8791,9 +9636,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -8907,7 +9752,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -8976,9 +9825,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -9051,10 +9900,10 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
+        "h": 13,
+        "w": 24,
         "x": 0,
-        "y": 55
+        "y": 143
       },
       "id": 11,
       "options": {
@@ -9062,7 +9911,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
         },
         "timezone": [
           "America/Los_Angeles"
@@ -9420,19 +10269,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -9475,7 +10322,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -9496,9 +10343,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -9561,9 +10408,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -9616,9 +10463,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -9732,7 +10579,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -9801,9 +10652,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -9876,10 +10727,10 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
-        "x": 12,
-        "y": 55
+        "h": 13,
+        "w": 24,
+        "x": 0,
+        "y": 156
       },
       "id": 12,
       "options": {
@@ -9887,7 +10738,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
         },
         "timezone": [
           "America/Los_Angeles"
@@ -10245,19 +11096,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -10300,7 +11149,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -10321,9 +11170,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -10386,9 +11235,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -10441,9 +11290,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -10557,7 +11406,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -10626,9 +11479,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -10701,10 +11554,10 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
+        "h": 13,
+        "w": 24,
         "x": 0,
-        "y": 66
+        "y": 169
       },
       "id": 13,
       "options": {
@@ -10712,7 +11565,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
         },
         "timezone": [
           "America/Los_Angeles"
@@ -11070,19 +11923,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -11125,7 +11976,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -11146,9 +11997,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -11211,9 +12062,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -11266,9 +12117,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -11382,7 +12233,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -11451,9 +12306,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -11526,10 +12381,10 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
-        "x": 12,
-        "y": 66
+        "h": 13,
+        "w": 24,
+        "x": 0,
+        "y": 182
       },
       "id": 14,
       "options": {
@@ -11537,7 +12392,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
         },
         "timezone": [
           "America/New_York"
@@ -11895,19 +12750,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -11950,7 +12803,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -11971,9 +12824,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -12036,9 +12889,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -12091,9 +12944,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -12207,7 +13060,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -12276,9 +13133,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -12351,10 +13208,10 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
+        "h": 13,
+        "w": 24,
         "x": 0,
-        "y": 77
+        "y": 195
       },
       "id": 15,
       "options": {
@@ -12362,7 +13219,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
         },
         "timezone": [
           "Europe/Madrid"
@@ -12720,19 +13577,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -12775,7 +13630,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -12796,9 +13651,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -12861,9 +13716,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -12916,9 +13771,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -13032,7 +13887,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -13101,9 +13960,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -13176,10 +14035,10 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
-        "x": 12,
-        "y": 77
+        "h": 13,
+        "w": 24,
+        "x": 0,
+        "y": 208
       },
       "id": 16,
       "options": {
@@ -13187,7 +14046,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
         },
         "timezone": [
           "Australia/Sydney"
@@ -13545,19 +14404,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -13600,7 +14457,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -13621,9 +14478,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -13686,9 +14543,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -13741,9 +14598,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -13857,7 +14714,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -13926,9 +14787,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -14001,10 +14862,10 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
+        "h": 13,
+        "w": 24,
         "x": 0,
-        "y": 88
+        "y": 221
       },
       "id": 17,
       "options": {
@@ -14012,7 +14873,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
         },
         "timezone": [
           "Asia/Taipei"
@@ -14370,19 +15231,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -14425,7 +15284,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -14446,9 +15305,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -14511,9 +15370,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -14566,9 +15425,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -14682,7 +15541,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -14751,9 +15614,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -14826,10 +15689,10 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
-        "x": 12,
-        "y": 88
+        "h": 13,
+        "w": 24,
+        "x": 0,
+        "y": 234
       },
       "id": 18,
       "options": {
@@ -14837,7 +15700,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
         },
         "timezone": [
           "Asia/Bangkok"
@@ -15195,19 +16058,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -15250,7 +16111,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -15271,9 +16132,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -15336,9 +16197,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -15391,9 +16252,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -15507,7 +16368,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -15576,9 +16441,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -15651,10 +16516,10 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
+        "h": 13,
+        "w": 24,
         "x": 0,
-        "y": 99
+        "y": 247
       },
       "id": 19,
       "options": {
@@ -15662,7 +16527,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
         },
         "timezone": [
           "America/Vancouver"
@@ -16020,19 +16885,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -16075,7 +16938,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -16096,9 +16959,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -16161,9 +17024,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -16216,9 +17079,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -16332,7 +17195,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -16401,9 +17268,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -16476,10 +17343,10 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
-        "x": 12,
-        "y": 99
+        "h": 13,
+        "w": 24,
+        "x": 0,
+        "y": 260
       },
       "id": 20,
       "options": {
@@ -16487,7 +17354,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
         },
         "timezone": [
           "America/Winnipeg"
@@ -16845,19 +17712,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -16900,7 +17765,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -16921,9 +17786,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -16986,9 +17851,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -17041,9 +17906,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -17157,7 +18022,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -17226,9 +18095,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -17301,10 +18170,10 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
+        "h": 13,
+        "w": 24,
         "x": 0,
-        "y": 110
+        "y": 273
       },
       "id": 21,
       "options": {
@@ -17312,7 +18181,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
         },
         "timezone": [
           "America/Toronto"
@@ -17670,19 +18539,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -17725,7 +18592,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -17746,9 +18613,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -17811,9 +18678,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -17866,9 +18733,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -17982,7 +18849,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -18051,9 +18922,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -18126,10 +18997,10 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
-        "x": 12,
-        "y": 110
+        "h": 13,
+        "w": 24,
+        "x": 0,
+        "y": 286
       },
       "id": 22,
       "options": {
@@ -18137,7 +19008,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
         },
         "timezone": [
           "America/Mexico_City"
@@ -18495,19 +19366,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -18550,7 +19419,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -18571,9 +19440,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -18636,9 +19505,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -18691,9 +19560,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -18807,7 +19676,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -18876,9 +19749,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -18951,10 +19824,10 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
+        "h": 13,
+        "w": 24,
         "x": 0,
-        "y": 121
+        "y": 299
       },
       "id": 23,
       "options": {
@@ -18962,7 +19835,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
         },
         "timezone": [
           "America/Santiago"
@@ -19320,19 +20193,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -19375,7 +20246,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -19396,9 +20267,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -19461,9 +20332,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -19516,9 +20387,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -19632,7 +20503,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -19701,9 +20576,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -19776,10 +20651,10 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
-        "x": 12,
-        "y": 121
+        "h": 13,
+        "w": 24,
+        "x": 0,
+        "y": 312
       },
       "id": 24,
       "options": {
@@ -19787,7 +20662,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
         },
         "timezone": [
           "Africa/Johannesburg"
@@ -20145,19 +21020,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -20200,7 +21073,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -20221,9 +21094,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -20286,9 +21159,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -20341,9 +21214,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -20457,7 +21330,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -20526,9 +21403,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -20601,10 +21478,10 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
+        "h": 13,
+        "w": 24,
         "x": 0,
-        "y": 132
+        "y": 325
       },
       "id": 25,
       "options": {
@@ -20612,7 +21489,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
         },
         "timezone": [
           "Europe/Berlin"
@@ -20970,19 +21847,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -21025,7 +21900,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -21046,9 +21921,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -21111,9 +21986,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -21166,9 +22041,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -21282,7 +22157,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -21351,9 +22230,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -21426,10 +22305,10 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
-        "x": 12,
-        "y": 132
+        "h": 13,
+        "w": 24,
+        "x": 0,
+        "y": 338
       },
       "id": 26,
       "options": {
@@ -21437,7 +22316,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
         },
         "timezone": [
           "Europe/Amsterdam"
@@ -21795,19 +22674,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -21850,7 +22727,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -21871,9 +22748,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -21936,9 +22813,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -21991,9 +22868,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -22107,7 +22984,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -22176,9 +23057,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -22251,10 +23132,10 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
+        "h": 13,
+        "w": 24,
         "x": 0,
-        "y": 143
+        "y": 351
       },
       "id": 27,
       "options": {
@@ -22262,7 +23143,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
         },
         "timezone": [
           "Europe/Vienna"
@@ -22620,19 +23501,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -22675,7 +23554,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -22696,9 +23575,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -22761,9 +23640,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -22816,9 +23695,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -22932,7 +23811,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -23001,9 +23884,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -23076,10 +23959,10 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
-        "x": 12,
-        "y": 143
+        "h": 13,
+        "w": 24,
+        "x": 0,
+        "y": 364
       },
       "id": 28,
       "options": {
@@ -23087,7 +23970,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
         },
         "timezone": [
           "Europe/Vienna"
@@ -23445,19 +24328,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -23500,7 +24381,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -23521,9 +24402,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -23586,9 +24467,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -23641,9 +24522,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -23757,7 +24638,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -23826,9 +24711,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -23901,10 +24786,10 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
+        "h": 13,
+        "w": 24,
         "x": 0,
-        "y": 154
+        "y": 377
       },
       "id": 29,
       "options": {
@@ -23912,7 +24797,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
         },
         "timezone": [
           "Africa/Cairo"
@@ -24270,19 +25155,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -24325,7 +25208,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -24346,9 +25229,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -24411,9 +25294,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -24466,9 +25349,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -24582,7 +25465,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -24651,9 +25538,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -24726,835 +25613,10 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
-        "x": 12,
-        "y": 154
-      },
-      "id": 30,
-      "options": {
-        "legend": {
-          "calcs": [],
-          "displayMode": "list",
-          "placement": "right",
-          "showLegend": false
-        },
-        "timezone": [
-          "Africa/Cairo"
-        ],
-        "tooltip": {
-          "hideZeros": false,
-          "mode": "single",
-          "sort": "none"
-        },
-        "xAxis": {
-          "axisLabel": {
-            "color": "#FFFFFF",
-            "fontSize": 12,
-            "formatter": "YYYY-MM-DD HH:mm"
-          },
-          "mode": "time",
-          "show": true,
-          "tickLabelMode": "continuous"
-        }
-      },
-      "pluginVersion": "12.2.1",
-      "targets": [
-        {
-          "lat": "27.916",
-          "lon": "34.330",
-          "refId": "A",
-          "sensitivity": "coldSensitive",
-          "units": "metric"
-        }
-      ],
-      "title": "Sharm El-Sheikh",
-      "type": "timeseries"
-    },
-    {
-      "datasource": "weacodi",
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "palette-classic"
-          },
-          "custom": {
-            "axisBorderShow": false,
-            "axisCenteredZero": false,
-            "axisColorMode": "text",
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "barAlignment": 0,
-            "barWidthFactor": 0.6,
-            "drawStyle": "line",
-            "fillOpacity": 42,
-            "gradientMode": "opacity",
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            },
-            "insertNulls": false,
-            "lineInterpolation": "stepBefore",
-            "lineWidth": 2,
-            "pointSize": 5,
-            "scaleDistribution": {
-              "type": "linear"
-            },
-            "showPoints": "never",
-            "showValues": false,
-            "spanNulls": false,
-            "stacking": {
-              "group": "A",
-              "mode": "none"
-            },
-            "thresholdsStyle": {
-              "mode": "off"
-            }
-          },
-          "mappings": [],
-          "max": 100,
-          "min": 0,
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": 0
-              }
-            ]
-          }
-        },
-        "overrides": [
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "daylight"
-            },
-            "properties": [
-              {
-                "id": "displayName",
-                "value": "Daylight"
-              },
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "super-light-blue",
-                  "mode": "fixed"
-                }
-              },
-              {
-                "id": "custom.fillOpacity",
-                "value": 100
-              },
-              {
-                "id": "custom.lineWidth",
-                "value": 0
-              },
-              {
-                "id": "custom.gradientMode",
-                "value": "opacity"
-              },
-              {
-                "id": "custom.axisPlacement",
-                "value": "hidden"
-              },
-              {
-                "id": "min",
-                "value": -1
-              },
-              {
-                "id": "max",
-                "value": 99
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "sun"
-            },
-            "properties": [
-              {
-                "id": "displayName",
-                "value": "Sun"
-              },
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "light-orange",
-                  "mode": "fixed"
-                }
-              },
-              {
-                "id": "custom.fillOpacity",
-                "value": 72
-              },
-              {
-                "id": "custom.gradientMode",
-                "value": "scheme"
-              },
-              {
-                "id": "custom.lineWidth",
-                "value": 0
-              },
-              {
-                "id": "custom.axisPlacement",
-                "value": "hidden"
-              },
-              {
-                "id": "min",
-                "value": 1
-              },
-              {
-                "id": "custom.hideFrom",
-                "value": {
-                  "legend": false,
-                  "tooltip": true,
-                  "viz": false
-                }
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "clouds"
-            },
-            "properties": [
-              {
-                "id": "displayName",
-                "value": "Clouds"
-              },
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "#e9f2ff",
-                  "mode": "fixed"
-                }
-              },
-              {
-                "id": "custom.lineWidth",
-                "value": 1
-              },
-              {
-                "id": "custom.fillOpacity",
-                "value": 45
-              },
-              {
-                "id": "custom.gradientMode",
-                "value": "scheme"
-              },
-              {
-                "id": "custom.axisPlacement",
-                "value": "hidden"
-              },
-              {
-                "id": "unit",
-                "value": "percent"
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "rain"
-            },
-            "properties": [
-              {
-                "id": "displayName",
-                "value": "Rain"
-              },
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "#57e4f2",
-                  "mode": "fixed"
-                }
-              },
-              {
-                "id": "custom.fillOpacity",
-                "value": 28
-              },
-              {
-                "id": "custom.gradientMode",
-                "value": "none"
-              },
-              {
-                "id": "custom.axisPlacement",
-                "value": "hidden"
-              },
-              {
-                "id": "min",
-                "value": 0.1
-              },
-              {
-                "id": "max",
-                "value": 10
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "snow"
-            },
-            "properties": [
-              {
-                "id": "displayName",
-                "value": "Snow"
-              },
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "#fdfdfd",
-                  "mode": "fixed"
-                }
-              },
-              {
-                "id": "custom.fillOpacity",
-                "value": 50
-              },
-              {
-                "id": "custom.gradientMode",
-                "value": "none"
-              },
-              {
-                "id": "custom.axisPlacement",
-                "value": "hidden"
-              },
-              {
-                "id": "min",
-                "value": 0.1
-              },
-              {
-                "id": "max",
-                "value": 10
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "comfort"
-            },
-            "properties": [
-              {
-                "id": "displayName",
-                "value": "Comfort"
-              },
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "yellow",
-                  "mode": "fixed"
-                }
-              },
-              {
-                "id": "custom.lineWidth",
-                "value": 3
-              },
-              {
-                "id": "custom.fillOpacity",
-                "value": 0
-              },
-              {
-                "id": "custom.axisPlacement",
-                "value": "hidden"
-              },
-              {
-                "id": "unit",
-                "value": "percent"
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "wind"
-            },
-            "properties": [
-              {
-                "id": "displayName",
-                "value": "Wind"
-              },
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "blue",
-                  "mode": "fixed"
-                }
-              },
-              {
-                "id": "custom.lineWidth",
-                "value": 2
-              },
-              {
-                "id": "custom.fillOpacity",
-                "value": 0
-              },
-              {
-                "id": "custom.axisPlacement",
-                "value": "hidden"
-              },
-              {
-                "id": "custom.lineInterpolation",
-                "value": "smooth"
-              },
-              {
-                "id": "min",
-                "value": 0
-              },
-              {
-                "id": "max",
-                "value": 40
-              },
-              {
-                "id": "decimals",
-                "value": 0
-              },
-              {
-                "id": "custom.hideFrom",
-                "value": {
-                  "legend": false,
-                  "tooltip": false,
-                  "viz": false
-                }
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "temperature"
-            },
-            "properties": [
-              {
-                "id": "displayName",
-                "value": "Temperature"
-              },
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "light-red",
-                  "mode": "fixed"
-                }
-              },
-              {
-                "id": "custom.lineWidth",
-                "value": 2
-              },
-              {
-                "id": "custom.fillOpacity",
-                "value": 0
-              },
-              {
-                "id": "custom.axisPlacement",
-                "value": "hidden"
-              },
-              {
-                "id": "custom.lineInterpolation",
-                "value": "smooth"
-              },
-              {
-                "id": "min",
-                "value": -20
-              },
-              {
-                "id": "max",
-                "value": 40
-              },
-              {
-                "id": "decimals",
-                "value": 0
-              },
-              {
-                "id": "custom.hideFrom",
-                "value": {
-                  "legend": true,
-                  "tooltip": false,
-                  "viz": true
-                }
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "humidity"
-            },
-            "properties": [
-              {
-                "id": "displayName",
-                "value": "Humidity"
-              },
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "green",
-                  "mode": "fixed"
-                }
-              },
-              {
-                "id": "custom.lineWidth",
-                "value": 1
-              },
-              {
-                "id": "custom.fillOpacity",
-                "value": 0
-              },
-              {
-                "id": "custom.axisPlacement",
-                "value": "hidden"
-              },
-              {
-                "id": "custom.drawStyle",
-                "value": "line"
-              },
-              {
-                "id": "custom.lineInterpolation",
-                "value": "linear"
-              },
-              {
-                "id": "min",
-                "value": 0
-              },
-              {
-                "id": "max",
-                "value": 100
-              },
-              {
-                "id": "custom.lineStyle",
-                "value": {
-                  "dash": [
-                    0,
-                    10
-                  ],
-                  "fill": "dot"
-                }
-              },
-              {
-                "id": "custom.hideFrom",
-                "value": {
-                  "legend": true,
-                  "tooltip": false,
-                  "viz": true
-                }
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "uv"
-            },
-            "properties": [
-              {
-                "id": "displayName",
-                "value": "UV Index"
-              },
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "purple",
-                  "mode": "fixed"
-                }
-              },
-              {
-                "id": "custom.lineWidth",
-                "value": 2
-              },
-              {
-                "id": "custom.fillOpacity",
-                "value": 0
-              },
-              {
-                "id": "custom.axisPlacement",
-                "value": "hidden"
-              },
-              {
-                "id": "min",
-                "value": 1
-              },
-              {
-                "id": "max",
-                "value": 10
-              },
-              {
-                "id": "custom.drawStyle",
-                "value": "line"
-              },
-              {
-                "id": "custom.lineInterpolation",
-                "value": "stepBefore"
-              },
-              {
-                "id": "custom.hideFrom",
-                "value": {
-                  "legend": true,
-                  "tooltip": false,
-                  "viz": true
-                }
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "feels_like"
-            },
-            "properties": [
-              {
-                "id": "displayName",
-                "value": "Feels Like"
-              },
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "semi-dark-red",
-                  "mode": "fixed"
-                }
-              },
-              {
-                "id": "custom.lineWidth",
-                "value": 2
-              },
-              {
-                "id": "custom.fillOpacity",
-                "value": 0
-              },
-              {
-                "id": "custom.axisPlacement",
-                "value": "hidden"
-              },
-              {
-                "id": "custom.lineInterpolation",
-                "value": "smooth"
-              },
-              {
-                "id": "min",
-                "value": -20
-              },
-              {
-                "id": "max",
-                "value": 40
-              },
-              {
-                "id": "custom.lineStyle",
-                "value": {
-                  "fill": "solid"
-                }
-              },
-              {
-                "id": "decimals",
-                "value": 0
-              },
-              {
-                "id": "custom.hideFrom",
-                "value": {
-                  "legend": false,
-                  "tooltip": false,
-                  "viz": false
-                }
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "wet"
-            },
-            "properties": [
-              {
-                "id": "displayName",
-                "value": "Wet"
-              },
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "#57e4f2",
-                  "mode": "fixed"
-                }
-              },
-              {
-                "id": "custom.drawStyle",
-                "value": "line"
-              },
-              {
-                "id": "custom.fillOpacity",
-                "value": 60
-              },
-              {
-                "id": "custom.axisPlacement",
-                "value": "hidden"
-              },
-              {
-                "id": "custom.lineInterpolation",
-                "value": "linear"
-              },
-              {
-                "id": "min",
-                "value": 1
-              },
-              {
-                "id": "max",
-                "value": 10
-              },
-              {
-                "id": "custom.lineWidth",
-                "value": 5
-              },
-              {
-                "id": "custom.lineStyle",
-                "value": {
-                  "fill": "solid"
-                }
-              },
-              {
-                "id": "custom.hideFrom",
-                "value": {
-                  "legend": false,
-                  "tooltip": false,
-                  "viz": false
-                }
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "pressure"
-            },
-            "properties": [
-              {
-                "id": "displayName",
-                "value": "Pressure"
-              },
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "#ffffff",
-                  "mode": "fixed"
-                }
-              },
-              {
-                "id": "custom.lineWidth",
-                "value": 1
-              },
-              {
-                "id": "custom.fillOpacity",
-                "value": 0
-              },
-              {
-                "id": "custom.axisPlacement",
-                "value": "hidden"
-              },
-              {
-                "id": "custom.lineInterpolation",
-                "value": "smooth"
-              },
-              {
-                "id": "min"
-              },
-              {
-                "id": "max"
-              },
-              {
-                "id": "custom.drawStyle",
-                "value": "line"
-              },
-              {
-                "id": "custom.lineStyle",
-                "value": {
-                  "dash": [
-                    0,
-                    10
-                  ],
-                  "fill": "dot"
-                }
-              },
-              {
-                "id": "custom.hideFrom",
-                "value": {
-                  "legend": true,
-                  "tooltip": false,
-                  "viz": true
-                }
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "ice"
-            },
-            "properties": [
-              {
-                "id": "displayName",
-                "value": "Ice"
-              },
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "#ffffff",
-                  "mode": "fixed"
-                }
-              },
-              {
-                "id": "custom.drawStyle",
-                "value": "line"
-              },
-              {
-                "id": "custom.fillOpacity",
-                "value": 60
-              },
-              {
-                "id": "custom.axisPlacement",
-                "value": "hidden"
-              },
-              {
-                "id": "custom.lineInterpolation",
-                "value": "linear"
-              },
-              {
-                "id": "min",
-                "value": 1
-              },
-              {
-                "id": "max",
-                "value": 10
-              },
-              {
-                "id": "custom.lineWidth",
-                "value": 5
-              },
-              {
-                "id": "custom.lineStyle",
-                "value": {
-                  "dash": [
-                    0,
-                    10
-                  ],
-                  "fill": "dot"
-                }
-              },
-              {
-                "id": "custom.hideFrom",
-                "value": {
-                  "legend": false,
-                  "tooltip": false,
-                  "viz": false
-                }
-              }
-            ]
-          }
-        ]
-      },
-      "gridPos": {
-        "h": 11,
-        "w": 12,
+        "h": 13,
+        "w": 24,
         "x": 0,
-        "y": 165
+        "y": 390
       },
       "id": 31,
       "options": {
@@ -25562,7 +25624,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
         },
         "timezone": [
           "Africa/Cairo"
@@ -25920,19 +25982,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -25975,7 +26035,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -25996,9 +26056,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -26061,9 +26121,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -26116,9 +26176,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -26232,7 +26292,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -26301,9 +26365,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -26376,10 +26440,10 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
-        "x": 12,
-        "y": 165
+        "h": 13,
+        "w": 24,
+        "x": 0,
+        "y": 403
       },
       "id": 32,
       "options": {
@@ -26387,7 +26451,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
         },
         "timezone": [
           "Europe/Rome"
@@ -26745,19 +26809,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -26800,7 +26862,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -26821,9 +26883,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -26886,9 +26948,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -26941,9 +27003,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -27057,7 +27119,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -27126,9 +27192,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -27201,10 +27267,10 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
+        "h": 13,
+        "w": 24,
         "x": 0,
-        "y": 176
+        "y": 416
       },
       "id": 33,
       "options": {
@@ -27212,7 +27278,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
         },
         "timezone": [
           "Asia/Dubai"
@@ -27570,19 +27636,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -27625,7 +27689,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -27646,9 +27710,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -27711,9 +27775,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -27766,9 +27830,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -27882,7 +27946,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -27951,9 +28019,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -28026,10 +28094,10 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
-        "x": 12,
-        "y": 176
+        "h": 13,
+        "w": 24,
+        "x": 0,
+        "y": 429
       },
       "id": 34,
       "options": {
@@ -28037,7 +28105,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
         },
         "timezone": [
           "Asia/Colombo"
@@ -28395,19 +28463,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -28450,7 +28516,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -28471,9 +28537,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -28536,9 +28602,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -28591,9 +28657,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -28707,7 +28773,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -28776,9 +28846,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -28851,10 +28921,10 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
+        "h": 13,
+        "w": 24,
         "x": 0,
-        "y": 187
+        "y": 442
       },
       "id": 35,
       "options": {
@@ -28862,7 +28932,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
         },
         "timezone": [
           "Europe/Athens"
@@ -29220,19 +29290,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -29275,7 +29343,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -29296,9 +29364,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -29361,9 +29429,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -29416,9 +29484,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -29532,7 +29600,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -29601,9 +29673,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -29676,10 +29748,10 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
-        "x": 12,
-        "y": 187
+        "h": 13,
+        "w": 24,
+        "x": 0,
+        "y": 455
       },
       "id": 36,
       "options": {
@@ -29687,7 +29759,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
         },
         "timezone": [
           "Europe/Zagreb"
@@ -30045,19 +30117,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -30100,7 +30170,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -30121,9 +30191,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -30186,9 +30256,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -30241,9 +30311,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -30357,7 +30427,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -30426,9 +30500,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -30501,10 +30575,10 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
+        "h": 13,
+        "w": 24,
         "x": 0,
-        "y": 198
+        "y": 468
       },
       "id": 37,
       "options": {
@@ -30512,7 +30586,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
         },
         "timezone": [
           "Europe/Lisbon"
@@ -30870,19 +30944,17 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
                 "value": "smooth"
               },
               {
-                "id": "min",
-                "value": 0
+                "id": "min"
               },
               {
-                "id": "max",
-                "value": 40
+                "id": "max"
               },
               {
                 "id": "decimals",
@@ -30925,7 +30997,7 @@
               },
               {
                 "id": "custom.axisPlacement",
-                "value": "hidden"
+                "value": "left"
               },
               {
                 "id": "custom.lineInterpolation",
@@ -30946,9 +31018,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -31011,9 +31083,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -31066,9 +31138,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -31182,7 +31254,11 @@
               {
                 "id": "custom.lineStyle",
                 "value": {
-                  "fill": "solid"
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
                 }
               },
               {
@@ -31251,9 +31327,9 @@
               {
                 "id": "custom.hideFrom",
                 "value": {
-                  "legend": true,
+                  "legend": false,
                   "tooltip": false,
-                  "viz": true
+                  "viz": false
                 }
               }
             ]
@@ -31326,10 +31402,10 @@
         ]
       },
       "gridPos": {
-        "h": 11,
-        "w": 12,
-        "x": 12,
-        "y": 198
+        "h": 13,
+        "w": 24,
+        "x": 0,
+        "y": 481
       },
       "id": 38,
       "options": {
@@ -31337,7 +31413,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "right",
-          "showLegend": false
+          "showLegend": true
         },
         "timezone": [
           "Europe/Stockholm"
@@ -31380,13 +31456,13 @@
   },
   "time": {
     "from": "now",
-    "to": "now+5d"
+    "to": "now+4d"
   },
   "timepicker": {},
   "timezone": "browser",
-  "title": "Weacodi (compact)",
-  "uid": "0b8a7066-2c53-446a-ae5c-3b8bf0872ccd",
-  "version": 9,
+  "title": "Weacodi – Overview",
+  "uid": "weacodi-overview",
+  "version": 1,
   "__requires": [
     {
       "type": "grafana",

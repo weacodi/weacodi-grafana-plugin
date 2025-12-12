@@ -1,21 +1,28 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-import { AppRootProps } from '@grafana/data';
-import { ROUTES } from '../../constants';
+import { PluginPage } from '@grafana/runtime';
+import pluginJson from '../../plugin.json';
 
-const PageOne = React.lazy(async () => ({ default: (await import('../../pages/PageOne')).PageOne }));
-const PageTwo = React.lazy(() => import('../../pages/PageTwo'));
-const PageThree = React.lazy(() => import('../../pages/PageThree'));
-const PageFour = React.lazy(() => import('../../pages/PageFour'));
-
-function App(props: AppRootProps) {
+function App() {
   return (
-    <Routes>
-      <Route path={ROUTES.Two} element={<PageTwo />} />
-      <Route path={`${ROUTES.Three}/:id?`} element={<PageThree />} />
-      <Route path={ROUTES.Four} element={<PageFour />} />
-      <Route path="*" element={<PageOne />} />
-    </Routes>
+    <PluginPage>
+      <div>
+        <h2>{pluginJson.name}</h2>
+        <p>
+          The Weacodi app bundles the Weacodi datasource and a ready-made dashboard so you can visualize the Weather
+          Comfort Diagram without extra setup.
+        </p>
+        <ul>
+          <li>
+            Datasource type: <code>Weacodi</code> (name it <code>weacodi</code> to match the bundled dashboard; uses
+            Open-Meteo via the Grafana data proxy).
+          </li>
+          <li>
+            Dashboard: <strong>Weacodi – Overview</strong> imports automatically when the app is enabled.
+          </li>
+          <li>No app configuration is required in this release.</li>
+        </ul>
+      </div>
+    </PluginPage>
   );
 }
 

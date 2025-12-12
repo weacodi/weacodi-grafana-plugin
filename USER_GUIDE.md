@@ -4,7 +4,9 @@ This document explains how to work with the Weacodi dashboard and the accompanyi
 
 ## Getting started
 
-After importing `weacodi_dashboard.json` (or running the Docker Compose setup) you will find a **Weacodi** dashboard ready to use. The panel already points at the bundled Weacodi datasource, so you can immediately change the query parameters from the panel editor.
+After enabling the Weacodi app (or running the Docker Compose setup) you will find the bundled dashboard **Weacodi – Overview**
+ready to use. The panels already point at the bundled Weacodi datasource, so you can immediately change the query parameters
+from the panel editor. You can also import the JSON file manually from the plugin bundle at `dashboards/weacodi_overview.json`.
 
 ### Datasource query options
 
