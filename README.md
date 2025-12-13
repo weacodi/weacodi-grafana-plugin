@@ -75,7 +75,6 @@ directly to Open-Meteo request parameters):
 | `lat`, `lon` | ✅ | Coordinates (-90…90 / -180…180) |
 | `days` | ❌ | Forecast window 1‑16 (default 16 + previous 24h) |
 | `sensitivity` | ❌ | `normal`, `heatSensitive`, `coldSensitive` |
-| `intensity` | ❌ | Cycling effort profile `0`…`2` |
 | `units` | ❌ | `metric` (default), `imperial`, `nautical` |
 
 The datasource processes the Open-Meteo payload locally to produce the layered

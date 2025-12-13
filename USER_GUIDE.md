@@ -14,7 +14,6 @@ from the panel editor. You can also import the JSON file manually from the plugi
 |-----------------|-----------------------------------------------------------------------------------------------|
 | **Latitude / Longitude** (`lat`, `lon`) | Geographic coordinates. Any decimal degree coordinate is supported. |
 | **Sensitivity** (`sensitivity`) | Fine-tunes the comfort calculation. Options: `Normal`, `Heat Sensitive`, `Cold Sensitive`. |
-| **Intensity** (`intensity`) | Cycling effort profile (0 – recreational, 1 – commute, 2 – active). Exposed in the API only; you can add it via the query JSON editor if needed. |
 | **Units** (`units`) | Rendering units: `Metric`, `Imperial`, or `Nautical (knots)`. Metric is the default. |
 | **Days** (`days`) | Optional. If omitted, the datasource returns the full 16-day window supplied by Open-Meteo. Provide an integer 1…16 to trim the forecast. |
 
@@ -73,7 +72,7 @@ You can adopt different palettes or ranges simply by editing these overrides (Pa
 
 ## Time range
 
-The dashboard default is `now → now + 16d` to match the API’s maximum forecast window. You can change the time picker to review a shorter slice (e.g., 5 days) or zoom into specific hours. When you adjust the time picker the panel automatically refreshes.
+The dashboard default is `now → now + 4d`. You can change the time picker to review a shorter or longer slice and the panel automatically refreshes.
 
 ## Tooltips and legend
 
