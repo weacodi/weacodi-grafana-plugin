@@ -87,7 +87,7 @@ descriptions live in [USER_GUIDE.md](USER_GUIDE.md).
 | Component | License | Notes |
 | --- | --- | --- |
 | Plugin code (`weacodi-weacodi-app/`, dashboards) | [AGPL-3.0-only](weacodi-weacodi-app/LICENSE) | Share-alike for the Grafana plugin code. |
-| Weather Comfort Diagram concept, diagrams, content, documentation (`docs/weacodi-concept.pdf`) | [CC BY-SA 4.0](docs/LICENSE) | CC BY-SA 4.0 |
+| Weather Comfort Diagram concept, diagrams, content, documentation (`docs/weacodi-concept.pdf`) | [CC BY-SA 4.0](docs/LICENSE) | Share-alike for Weacodi concept and documentation. |
 
 ## Authors & contact
 
