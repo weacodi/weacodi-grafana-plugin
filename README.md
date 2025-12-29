@@ -1,5 +1,30 @@
 # Weacodi Grafana Plugin
 
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+[![Creative Commons: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
+
+**Important Note**
+
+This plugin is **fully functional** and actively used in production on [weacodi.com](https://weacodi.com) as a live demonstration of the original **Weather Comfort Diagram (Weacodi™)** method.
+
+The plugin is **not listed** in the official Grafana plugins catalog due to unresolved differences regarding the preferred licensing file structure and plugin type requirements.
+
+**You can still install and use the plugin without any restrictions**:
+
+- Download the latest release as a ZIP archive from the [Releases page](https://github.com/weacodi/weacodi-grafana-plugin/releases) and install it via Grafana UI  
+  (`Configuration → Plugins → Install plugin`)
+- Or build it from source following the instructions below
+
+The plugin provides:
+- A datasource that fetches weather data from Open-Meteo and calculates comfort score, feels-like temperature, sensitivity flags and other derived parameters
+- A custom panel rendering the unique multi-layer **Weather Comfort Diagram**
+- Example dashboard (located in `/dashboards/` folder – import manually after installation)
+
+For questions, installation help, feature requests or suggestions – feel free to [open an Issue](https://github.com/weacodi/weacodi-grafana-plugin/issues) or write to weacodi@gmail.com.
+
+---
+
+
 This repository ships the official Grafana implementation of the **Weather
 Comfort Diagram (Weacodi™)** — a datasource + panel combo that draws the
 multi-layer comfort chart directly inside Grafana dashboards by fetching data
