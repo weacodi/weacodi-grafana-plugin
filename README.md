@@ -9,7 +9,7 @@ This plugin is **fully functional** and actively used in production on [weacodi.
 
 The plugin is **not listed** in the official Grafana plugins catalog due to unresolved differences regarding the preferred licensing file structure and plugin type requirements.
 
-**You can still install and use the plugin without any restrictions**:
+**You can still install and use the plugin**:
 
 - Download the latest release as a ZIP archive from the [Releases page](https://github.com/weacodi/weacodi-grafana-plugin/releases) and install it via Grafana UI  
   (`Configuration → Plugins → Install plugin`)
