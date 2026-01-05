@@ -18,7 +18,7 @@ The plugin is **not listed** in the official Grafana plugins catalog due to unre
 The plugin provides:
 - A datasource that fetches weather data from Open-Meteo and calculates comfort score, feels-like temperature, sensitivity flags and other derived parameters
 - A custom panel rendering the unique multi-layer **Weather Comfort Diagram**
-- Example dashboard (located in `/dashboards/` folder – import manually after installation)
+- Example dashboard
 
 For questions, installation help, feature requests or suggestions – feel free to [open an Issue](https://github.com/weacodi/weacodi-grafana-plugin/issues) or write to weacodi@gmail.com.
 
