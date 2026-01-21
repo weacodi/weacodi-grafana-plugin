@@ -118,6 +118,7 @@ descriptions live in [USER_GUIDE.md](USER_GUIDE.md).
 
 - Email: [weacodi@gmail.com](mailto:weacodi@gmail.com)
 - Website: <https://weacodi.com>
+- Github Pages: <https://weacodi.github.io/weacodi/>
 
 ## More docs
 
