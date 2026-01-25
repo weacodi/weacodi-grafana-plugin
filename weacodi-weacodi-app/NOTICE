@@ -1,19 +1,21 @@
 Weacodi Grafana Plugin NOTICE
 =============================
 
-Copyright © 2024‑2025 Weacodi.com
+Copyright © 2024‑2026 Oleksii Zubovskyi and Olena Zubovska
 
 The Weacodi Grafana plugin (datasource, panel) is licensed
 under the GNU Affero General Public License v3.0. If you modify and deploy this
 plugin—whether privately or as a hosted Grafana service—you must provide source
 code to users as required by the AGPL.
 
-The underlying Weather Comfort Diagram (Weacodi™) methodology, visual model and
+The underlying Weather Comfort Diagram™ (Weacodi®) methodology, visual model and
 terminology remain separately licensed under the Creative Commons
 Attribution‑ShareAlike 4.0 International License (see `../docs/LICENSE`
-and `../docs/weacodi-concept.pdf`). Weacodi (Weather Comfort Diagram) is
+and `../docs/weacodi-concept.pdf`). Weacodi® (Weather Comfort Diagram™) is
 released under CC BY-SA 4.0.
 
-Trademark notice: Weacodi™ and any stylized variants are trademarks of the project authors. Use the name descriptively, but do not brand your product, logo, or domain with it without permission.
+Trademark notice: Weacodi® and any stylized variants are registered trademarks of
+the project authors Oleksii Zubovskyi and Olena Zubovska. Use the name descriptively,
+but do not brand your product, logo, or domain with it without permission.
 
-Questions? Email weacodi@gmail.com.
+Questions? Email weacodi@gmail.com, zubovsky@gmail.com.
