@@ -5,7 +5,7 @@
 
 **Important Note**
 
-This plugin is **fully functional** and actively used in production on [weacodi.com](https://weacodi.com) as a live demonstration of the original **Weather Comfort Diagram (Weacodi™)** method.
+This plugin is **fully functional** and actively used in production on [weacodi.com](https://weacodi.com) as a live demonstration of the original **Weather Comfort Diagram (Weacodi®)** method.
 
 The plugin is **not listed** in the official Grafana plugins catalog due to unresolved differences regarding the preferred licensing file structure and plugin type requirements.
 
@@ -26,7 +26,7 @@ For questions, installation help, feature requests or suggestions – feel free 
 
 
 This repository ships the official Grafana implementation of the **Weather
-Comfort Diagram (Weacodi™)** — a datasource + panel combo that draws the
+Comfort Diagram (Weacodi®)** — a datasource + panel combo that draws the
 multi-layer comfort chart directly inside Grafana dashboards by fetching data
 from [Open-Meteo](https://open-meteo.com) via the Grafana data proxy (no custom
 backend required).
@@ -114,8 +114,9 @@ descriptions live in [USER_GUIDE.md](USER_GUIDE.md).
 | Plugin code (`weacodi-weacodi-app/`, dashboards) | [AGPL-3.0-only](weacodi-weacodi-app/LICENSE) | Share-alike for the Grafana plugin code. |
 | Weather Comfort Diagram concept, diagrams, content, documentation (`docs/weacodi-concept.pdf`) | [CC BY-SA 4.0](docs/LICENSE) | Share-alike for Weacodi concept and documentation. |
 
-Attribution: Provide attribution by linking to weacodi.com or weacodi.github.io/weacodi/ and referring to the concept as “Weather Comfort Diagram” or “Weacodi”, and Author names.
-Trademark notice: Weacodi® and any stylized variants are registered trademarks of the project authors. Use the name descriptively, but do not brand your product, logo, or domain with it without permission.
+**Attribution:** Provide attribution by linking to weacodi.com or weacodi.github.io/weacodi/ and referring to the concept as “Weather Comfort Diagram” or “Weacodi”, and Author names.
+
+**Trademark notice:** Weacodi® and any stylized variants are registered trademarks of the project authors. Use the name descriptively, but do not brand your product, logo, or domain with it without permission.
 
 ## Authors & contact
 
