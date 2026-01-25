@@ -115,6 +115,7 @@ descriptions live in [USER_GUIDE.md](USER_GUIDE.md).
 | Weather Comfort Diagram concept, diagrams, content, documentation (`docs/weacodi-concept.pdf`) | [CC BY-SA 4.0](docs/LICENSE) | Share-alike for Weacodi concept and documentation. |
 
 Attribution: Provide attribution by linking to weacodi.com or weacodi.github.io/weacodi/ and referring to the concept as “Weather Comfort Diagram” or “Weacodi”, and Author names.
+Trademark notice: Weacodi® and any stylized variants are registered trademarks of the project authors. Use the name descriptively, but do not brand your product, logo, or domain with it without permission.
 
 ## Authors & contact
 
