@@ -21,7 +21,7 @@ Weacodi® and any stylized variants are trademarks of the project authors. Use
 the name descriptively, but do not brand your product, logo, or domain with it
 without permission. Questions? Email weacodi@gmail.com.
 
-Want to use Weacodi®?
+Want to use Weacodi® concept?
 ---------------------
 
 You are welcome to integrate the concept in your projects. Provide attribution and share your work. For questions or trademark permission, contact weacodi@gmail.com or zubovsky@gmail.com.
