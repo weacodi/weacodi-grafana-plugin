@@ -124,7 +124,7 @@ descriptions live in [USER_GUIDE.md](USER_GUIDE.md).
 - Email: [weacodi@gmail.com](mailto:weacodi@gmail.com), [zubovsky@gmail.com](mailto:zubovsky@gmail.com)
 - Website: <https://weacodi.com>
 - Github Pages: <https://weacodi.github.io/weacodi/>
-- LinkedIn: [Oleksii(Alexej) Zubovsky](https://www.linkedin.com/in/alexej-zubovsky-43341651/)
+- LinkedIn: [Oleksii Zubovskyi](https://www.linkedin.com/in/alexej-zubovsky-43341651/)
 
 ## More docs
 
