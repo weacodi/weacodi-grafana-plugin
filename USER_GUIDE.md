@@ -1,6 +1,6 @@
-# Weacodi Grafana User Guide
+# Weacodi Grafana Plugin User Guide
 
-This document explains how to work with the Weacodi dashboard and the accompanying Grafana data source.
+This document explains how to work with the Weacodi® dashboard and the accompanying Grafana data source.
 
 ## Getting started
 
