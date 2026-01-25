@@ -17,9 +17,9 @@ The diagram, descriptive materials, and reference imagery in this repository are
 Trademark Notice
 ----------------
 
-Weacodi® and any stylized variants are trademarks of the project authors. Use
+Weacodi® and any stylized variants are registered trademarks of the project authors Oleksii Zubovskyi and Olena Zubovska. Use
 the name descriptively, but do not brand your product, logo, or domain with it
-without permission. Questions? Email weacodi@gmail.com.
+without permission. Questions? Email weacodi@gmail.com or zubovsky@gmail.com.
 
 Want to use Weacodi® concept?
 ---------------------
