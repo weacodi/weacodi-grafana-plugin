@@ -33,5 +33,6 @@ also import it manually via *Dashboards → Import*.
 
 - **Plugin code**: [AGPL-3.0-only](https://github.com/weacodi/weacodi-grafana-plugin/blob/main/LICENSE) (share-alike for the Grafana plugin code).
 - **Weather Comfort Diagram™ concept, diagrams, content, documentation** ([docs/weacodi-concept.pdf](https://github.com/weacodi/weacodi-grafana-plugin/blob/main/docs/weacodi-concept.pdf)): [CC BY-SA 4.0](https://github.com/weacodi/weacodi-grafana-plugin/blob/main/LICENSE_WEACODI.md).
+- **Authors**: Oleksii Zubovskyi and Olena Zubovska
 
-Project website: https://weacodi.com
+Project website: https://weacodi.github.io/weacodi/, https://weacodi.com
