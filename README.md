@@ -117,7 +117,7 @@ Provide attribution by linking to weacodi.com or weacodi.github.io/weacodi/ and 
 
 ## Authors & contact
 
-- Authors: Oleksii Zubovsky and Olena Zubovska
+- Authors: Oleksii Zubovskyi and Olena Zubovska
 - Email: [weacodi@gmail.com](mailto:weacodi@gmail.com), [zubovsky@gmail.com](mailto:zubovsky@gmail.com)
 - Website: <https://weacodi.com>
 - Github Pages: <https://weacodi.github.io/weacodi/>
