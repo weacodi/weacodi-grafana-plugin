@@ -1,7 +1,7 @@
 License
 =======
 
-Legal and usage information about the Weather Comfort Diagram and Weacodi™.
+Legal and usage information about the Weather Comfort Diagram™ and Weacodi®.
 
 Licensed under Creative Commons
 --------------------------------
@@ -10,20 +10,21 @@ The diagram, descriptive materials, and reference imagery in this repository are
 
 ### Attribution Requirements
 
-- Include a link to https://weacodi.com.
-- Mention the concept name: “Weather Comfort Diagram” or “Weacodi™”.
+- Include a link to https://weacodi.com or https://weacodi.github.io/weacodi/.
+- Mention the concept name: “Weather Comfort Diagram™” or “Weacodi®”.
+- Inlude authors: Oleksii Zubovskyi and Olena Zubovska
 
 Trademark Notice
 ----------------
 
-Weacodi™ and any stylized variants are trademarks of the project authors. Use
+Weacodi® and any stylized variants are trademarks of the project authors. Use
 the name descriptively, but do not brand your product, logo, or domain with it
 without permission. Questions? Email weacodi@gmail.com.
 
-Want to use Weacodi™?
+Want to use Weacodi®?
 ---------------------
 
-You are welcome to integrate the concept in your projects. Provide attribution and share your work. For questions or trademark permission, contact weacodi@gmail.com.
+You are welcome to integrate the concept in your projects. Provide attribution and share your work. For questions or trademark permission, contact weacodi@gmail.com or zubovsky@gmail.com.
 
 Software implementations of the diagram (e.g., this Grafana plugin and API) are
 licensed separately under the GNU Affero General Public License v3.0—see
