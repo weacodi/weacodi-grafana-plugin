@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use Weacodi (Weather Comfort Diagram™) in your research, work, or application, please cite it using the information below. Thank you!"
+authors:
+  - family-names: Zubovskyi
+    given-names: Oleksii
+  - family-names: Zubovska
+    given-names: Olena
+title: "Weacodi: Weather Comfort Diagram™ — One Second Forecast. An alternative way to visualize the weather forecast"
+version: "1.0"  
+doi: 10.5281/zenodo.18916318
+date-released: 2025-02-03
+url: "https://github.com/weacodi/weacodi-grafana-plugin"
+preferred-citation:
+  type: preprint
+  authors:
+    - family-names: Zubovskyi
+      given-names: Oleksii
+    - family-names: Zubovska
+      given-names: Olena
+  title: "Weacodi - One Second Forecast. An alternative way to visualize the weather forecast — helping to assess atmospheric conditions in just one second."
+  year: 2025
+  doi: 10.5281/zenodo.18916318
+  url: "https://doi.org/10.5281/zenodo.18916318"
