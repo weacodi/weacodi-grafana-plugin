@@ -2,6 +2,7 @@
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 [![Creative Commons: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18916318.svg)](https://doi.org/10.5281/zenodo.18916318)
 
 **Important Note**
 
@@ -135,11 +136,9 @@ descriptions live in [USER_GUIDE.md](USER_GUIDE.md).
 
 ## Citation
 
-If you use WeaCoDi in your research, please cite the concept preprint:
+If you use Weacodi in your research, please cite the concept preprint:
 
 **Zubovskyi, O., & Zubovska, O. (2025). Weacodi - One Second Forecast. An alternative way to visualize the weather forecast — helping to assess atmospheric conditions in just one second. Zenodo. https://doi.org/10.5281/zenodo.18916318**
-
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18916318.svg)](https://doi.org/10.5281/zenodo.18916318)
 
 Full citation details: https://doi.org/10.5281/zenodo.18916318
 
