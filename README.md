@@ -132,3 +132,15 @@ descriptions live in [USER_GUIDE.md](USER_GUIDE.md).
 - [USER_GUIDE.md](USER_GUIDE.md) – dashboard overrides, API parameters, tips.
 - [docs/weacodi-concept.pdf](docs/weacodi-concept.pdf) – full diagram spec.
 - [Open-Meteo docs](https://open-meteo.com/en/docs) – upstream forecast API.
+
+## Citation
+
+If you use WeaCoDi in your research, please cite the concept preprint:
+
+**Zubovskyi, O., & Zubovska, O. (2025). Weacodi - One Second Forecast. An alternative way to visualize the weather forecast — helping to assess atmospheric conditions in just one second. Zenodo. https://doi.org/10.5281/zenodo.18916318**
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18916318.svg)](https://doi.org/10.5281/zenodo.18916318)
+
+Full citation details: https://doi.org/10.5281/zenodo.18916318
+
+Also see the license and attribution guidelines in the document.
