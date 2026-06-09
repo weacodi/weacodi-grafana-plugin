@@ -4,7 +4,7 @@
 [![Creative Commons: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18916318.svg)](https://doi.org/10.5281/zenodo.18916318)
 
-**Important Note**
+
 
 This plugin is **fully functional** and actively used in production on [weacodi.com](https://weacodi.com) as a live demonstration of the original **Weather Comfort Diagram™ (Weacodi®)** method.
 
