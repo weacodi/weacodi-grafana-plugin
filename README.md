@@ -7,7 +7,6 @@
 **Important Note**
 
 This plugin is **fully functional** and actively used in production on [weacodi.com](https://weacodi.com) as a live demonstration of the original **Weather Comfort Diagram™ (Weacodi®)** method.
-The plugin is not listed in the official Grafana plugins catalog due to unresolved differences regarding the preferred licensing file structure and plugin type requirements.
 
 **To install and use the plugin**:
 
